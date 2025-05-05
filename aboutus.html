@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        body {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            display: flex;
+            flex-direction: column;
+        }  
+        h1{
+            margin-top: 1%;
+        }
+        .sec-1{
+            background-image: url('./Images/image-aboutus.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 40vh;
+            font-family: sans-serif;
+        }
+        #tb-2{
+            display:flex;
+            justify-content: space-around;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tb-2-1:hover{
+            opacity: 60%;
+        }
+        #tb-2 a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            padding-bottom: 5px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f9f9f8;
+            line-height: 40px;
+        }
+        #auth a{
+            border-bottom:none;
+        }
+        .sec-2{
+            width: 50%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            justify-content: flex-end;
+        }
+        .tb-1{
+            width: 50%;
+            text-align: center;
+        }
+        .tb-1 h1{
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .btn-1{
+            width: 200px;
+            height:50px;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 20px;
+            color: #ff8000;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .btn-1:hover{
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            color: white;
+            opacity: 80%;
+        }
+        .connect{
+            width: 100%;
+            height: 15%;
+            background-color: #627686;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;       
+        }
+        #flx-1{
+            display: flex;
+            justify-content: center;
+        }
+        #flx-1 img{
+            height: 70%;
+            padding-top: 2%;
+        }
+        #flx-1 h2{
+            padding-top: 3%;
+        }
+        .connect h2{
+            margin: 0;
+        }
+        #flx-2{
+            display: flex;
+            justify-content: space-evenly;
+            width: 70%;
+            padding-top: 1%;
+            padding-bottom: 2%;
+        }
+        #flx-2 input{
+            width:25%;
+            height:40px;
+            border:2px solid #ff8000;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        ::placeholder{
+            color: #ff8000;
+            padding-left: 2%;
+        }
+        .btn-4{
+            width: 130px;
+            height:40px;
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            border-radius: 10px;
+            color: #627686;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            color: white;
+        }
+        .btn-4:hover{
+            opacity: 80%;
+            cursor: pointer;
+        }
+        .stay-conn{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .links{
+            align-self: flex-start;
+            display: flex;
+            width: 100%;
+            height: 40%;
+            justify-content: space-between;
+        }
+        #s-link a:hover,.rel-links a:hover{
+            opacity: 60%;
+            cursor: pointer;
+        }
+        .rel-links h3{
+            margin: 5px;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+        }
+        .rel-links a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .foo,.mid-1,.bottom,.connect,.footer-2{
+            border-top: 2px solid white;
+        }
+        #agile-logo,.follow-link,.rel-links{
+            align-self: flex-end;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #ff8000;
+            padding: 8px 14px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: transparent;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #ff8000;
+        }
+        .carousel-item .bot-2{
+            width: 70%;
+        }
+        .mid{
+            margin: 3%;
+        }
+        .mid img{
+            width: 100%;
+            height: auto;
+            padding: 3%;
+        }
+        .mid-1>div{
+            padding: 3%;
+        }
+        .mid h3{
+            color: #ff8000;
+            font-weight: 600;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .mid-1 h4{
+            line-height: 40px;
+            word-spacing: 0.6em;
+            text-align: justify;
+            color: #627686;
+        }
+        .bot-main{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .bot{
+            width: 30%;
+            text-align: center;
+        }
+        .bot h4{
+            color: #ff8000;
+        }
+        .bot h4:last-child{
+            color:#627686;
+        }
+        .bot>img{
+            height: 80%;
+        }
+    </style>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                var user = localStorage.getItem("user");
+                if(user != ""){
+                    document.querySelector("#auth-a").innerText = user;
+                    document.querySelector("#auth-a").removeAttribute("href");
+                    document.querySelector("#auth").classList.add("dropdown");
+                }
+                // Activate the Carousel, but pause it from the start
+                $("#myCarousel").carousel("pause");
+                        
+                // Go to the second item
+                $("#myBtn").click(function(){
+                    $("#myCarousel").carousel("prev");
+                });
+
+                // Go to the third item
+                $("#myBtn2").click(function(){
+                    $("#myCarousel").carousel("next");
+                });
+                    
+                // Enable Carousel Indicators
+                $(".item1").click(function(){
+                    $("#myCarousel").carousel(0);
+                });
+                $(".item2").click(function(){
+                    $("#myCarousel").carousel(1);
+                });
+                $(".item3").click(function(){
+                    $("#myCarousel").carousel(2);
+                });
+                    
+                // Enable Carousel Controls
+                $(".carousel-control-prev").click(function(){
+                    $("#myCarousel").carousel("prev");
+                });
+                $(".carousel-control-next").click(function(){
+                    $("#myCarousel").carousel("next");
+                });
+            });
+            function logout(){
+                localStorage.setItem("user","");
+                document.querySelector("#auth-a").innerText = "Login";
+                document.querySelector("#auth-a").setAttribute("href", "./signin.html");
+                document.querySelector("#auth").classList.remove("dropdown");
+            }
+        </script>
+        <div class="sec-1">
+            <div id="tb-2">
+                <div><a href="firstpage.html"><img src="./Images/log1.png"></a></div>
+                <div class="tb-2-1"><a href="./assessment.html">Assessment</a></div>
+                <div class="tb-2-1"><a href="./training.html">Training</a></div>
+                <div class="tb-2-1"><a href="./coaching.html">Coaching</a></div>
+                <div class="tb-2-1"><a href="./upcomingcourses.html">Events</a></div>
+                <div class="tb-2-1" id="auth">
+                    <a class="dropbtn" id="auth-a" href="./signin.html">Login</a>
+                    <div class="dropdown-content">
+                        <a href="javascript:;" onclick="logout()">Logout</a>
+                        <a href="javascript:;window.location.href='regcourses.html'">Courses</a>
+                      </div>
+                </div>
+            </div>
+            <div class="sec-2">
+                <div class="tb-1">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row mid-1">
+                        <div class="col-lg-6">
+                            <h3>Our Mission</h3>
+                            <h4>We train people how to do Agile Software Development the right way so they can build high-quality, complete products.</h4>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="./Images/image-001.jpg">
+                        </div>
+                    </div>
+                    <div class="row mid-1">
+                        <div class="col-lg-6">
+                            <img src="./Images/image-002.jpg">
+                        </div>
+                        <div class="col-lg-6">
+                            <h3>Our Story</h3>
+                            <h4>We are a team of 3 to 4 people who help you learn, talk about, and use Agile in your work.</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Our Team</h3>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                              <li data-target="#myCarousel" data-slide-to="1"></li>
+                              <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                        
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                              <div class="item active">
+                                <div class="bot-main">
+                                    <div class="bot">
+                                        <img src="./Images/image-012.png" style="width: 400px; height: 400px;">
+                                        <h4>Rajkumar Kannan</h4>
+                                        <h4>Dev</h4>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="./Images/image-008.png" style="width: 400px; height: 400px;">
+                                        <h4>Roshni Chippe</h4>
+                                        <h4>Dev</h4>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="./Images/image-011.png" style="width: 400px; height: 400px;">
+                                        <h4>Ganesh Reddy Chinthalacheruvu</h4>
+                                        <h4>Dev</h4>
+                                    </div>
+                                </div>
+                              </div>
+                        
+                              <div class="item">
+                                <div class="bot-main">
+                                    <div class="bot">
+                                        <img src="./Images/image-013.png" style="width: 400px; height: 400px;">
+                                        <h4>Funda Durupinar Babur</h4>
+                                        <h4>Content Writer</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                              <span class="glyphicon glyphicon-chevron-left"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                              <span class="glyphicon glyphicon-chevron-right"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        <div class="connect">
+            <div class="stay-conn">
+                <div id="flx-1">
+                    <img src="./Images/s2.png">
+                    <h2>Stay connected with Us</h2>
+                </div>
+                <h3>Receive information on upcoming Workshops and Insigns</h3>
+                <div id="flx-2">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <button class="btn-4">SignUp</button>
+            </div>
+            <div class="links">
+                <div id="agile-logo">
+                    <img src="./Images/agile-logo.png">
+                </div>
+                <div class="rel-links">
+                    <a href="./aboutus.html"><h3>About Us</h3></a>
+                    <a href="./contactus.html"><h3>Contact Us</h3></a>
+                    <a href="./trainer.html"><h3>Become a Trainer</h3></a>
+                    <a><h3>Terms & Conditions</h3></a>
+                </div>
+                <div class="follow-link">
+                    <h3>Follow Us</h3>
+                    <div id="s-link">
+                        <a><img src="./Images/fb.png"></a>
+                        <a><img src="./Images/lkdin.png"></a>
+                        <a><img src="./Images/twtr.png"></a>
+                        <a><img src="./Images/ytube.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

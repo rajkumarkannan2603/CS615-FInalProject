@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        body {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            display: flex;
+            flex-direction: column;
+        }  
+        h1{
+            margin-top: 1%;
+        }
+        .sec-1{
+            background-image: url('./Images/home-img-1-2.png');
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+        #tb-2{
+            display:flex;
+            justify-content: space-around;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tb-2-1:hover{
+            opacity: 60%;
+        }
+        #tb-2 a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            padding-bottom: 5px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f9f9f8;
+            line-height: 40px;
+        }
+        #auth a{
+            border-bottom:none;
+        }
+        .sec-2{
+            width: 50%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            justify-content: flex-end;
+        }
+        .tb-1{
+            width: 50%;
+            text-align: center;
+        }
+        .btn-1{
+            width: 200px;
+            height:50px;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 20px;
+            color: #ff8000;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .btn-1:hover{
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            color: white;
+            opacity: 80%;
+        }
+        .mid-1{
+            display: flex;
+            height: 15%;
+            padding: 1%;
+            justify-content: space-around;
+        }
+        .clr-1{
+            color:#ff8000;
+        }
+        .clr-2{
+            color: grey;
+        }
+        .mid-1-1{
+            width: 30%;
+        }
+        .mid-1-1 img{
+            padding-top: 5%;
+            padding-bottom: 5%;
+            width: 100%;
+            height: 100%;
+        }
+        .mid-1-2{
+            padding-left: 2%;
+            padding-top: 1%;
+            width: 30%;
+        }
+        .mid-1-2 h4{
+            word-spacing: 0.3em;
+            line-height: 1.5em;
+            color:#627686
+        }
+        .mid-1-2-1{
+            display: none;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-family: sans-serif;
+            word-spacing: 0.3em;
+            line-height: 2em;
+        }
+        .mid-1-3{
+            width: 15%;
+            padding-left: 2%;
+            padding-top: 1%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .mid-1-3 button{
+            width: 60%;
+            height: 15%;
+        }
+        .mid-1-4{
+            width: 25%;
+            font-size: 20px;
+            align-self: center;
+            font-family: sans-serif;
+        }
+        .mid-1-4 a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-2{
+            color:white;
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            font-weight: bold;
+        }
+        .btn-3{
+            color: white;
+            background-color: #627686;
+            border: 2px solid #627686;
+            font-weight: bold;
+        }
+        .btn-2:hover,.btn-3:hover{
+            cursor: pointer;
+            opacity: 70%;
+        }
+        .bottom{
+            background-color: #ff8000;
+            width: 100%;
+            height:20%;    
+        }
+        .bottom h1,.footer-1 h1, .footer-2 h1{
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+        }
+        .bot-1 {
+            display: flex;
+            width: 40%;
+            justify-content: space-between;
+        }
+        .bot-3 img{
+            width:100%;
+            height:90%;
+            padding: 3%;
+        }
+        .bot-1 h3,.bot-1 h5{
+            align-self: center;
+        }
+        .fot-main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .bot-main{
+            display: flex;
+            justify-content: center;
+            padding-left: 10%;            
+        }
+        .bot {
+            width: 23%;
+            padding-top: 1%;
+            padding-bottom: 2%;
+        }
+        .bottom .bot{
+            color: white;
+        }
+        .bot-2 {
+            font-family: sans-serif;
+            word-spacing: 0.5em;
+            line-height: 1.5em;
+        }
+        .bot-2 p{
+            padding-top: 10%;
+        }
+        .foo{
+            display: flex;
+            flex-direction: column;
+            height: 15%;
+        }
+        .footer-1{
+            background-color: #ff8000;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height:60%;    
+        }
+        .footer-1 h1{
+            color: white;
+        }
+        .footer-1 .bot{
+            color:white;
+        }
+        .footer-2{
+            background-color: #627686;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height:40%;
+        }
+        .footer-2 .bot{
+            color:white;
+        }
+        .connect{
+            width: 100%;
+            height: 15%;
+            background-color: #627686;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;       
+        }
+        #flx-1{
+            display: flex;
+            justify-content: center;
+        }
+        #flx-1 img{
+            height: 70%;
+            padding-top: 2%;
+        }
+        #flx-1 h2{
+            padding-top: 3%;
+        }
+        .connect h2{
+            margin: 0;
+        }
+        #flx-2{
+            display: flex;
+            justify-content: space-evenly;
+            width: 70%;
+            padding-top: 1%;
+            padding-bottom: 2%;
+        }
+        #flx-2 input{
+            width:25%;
+            height:40px;
+            border:2px solid #ff8000;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        ::placeholder{
+            color: #ff8000;
+            padding-left: 2%;
+        }
+        .btn-4{
+            width: 150px;
+            height:50px;
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            border-radius: 10px;
+            color: #627686;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            color: white;
+        }
+        .btn-4:hover{
+            opacity: 80%;
+            cursor: pointer;
+        }
+        .stay-conn{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .links{
+            align-self: flex-start;
+            display: flex;
+            width: 100%;
+            height: 40%;
+            justify-content: space-between;
+        }
+        #s-link a:hover,.rel-links a:hover{
+            opacity: 60%;
+            cursor: pointer;
+        }
+        .rel-links h3{
+            margin: 5px;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+        }
+        .rel-links a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .foo,.mid-1,.bottom,.connect,.footer-2{
+            border-top: 2px solid white;
+        }
+        #agile-logo,.follow-link,.rel-links{
+            align-self: flex-end;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #ff8000;
+            padding: 8px 14px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: transparent;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #ff8000;
+        }
+        .carousel-item .bot-2{
+            width: 70%;
+        }
+    </style>
+    </head>
+    <body>
+        <script>
+            var i = 0;
+            let prev = 0;
+            var images = ["./Images/i2.png","./Images/i3.png","./Images/i4.png","./Images/i5.png"];
+            var content = ['<h1>WE PROVIDE AGILE SOFTWARE DEVELOPMENT COURSE</h1><button class="btn-1">Collabrate</button>',
+                           '<h1>GET INSIGHTFUL FEEDBACK FOR YOUR COMPANY</h1><button class="btn-1">Schedule Assessment</button>',
+                           '<h1>BEST AGILE COURSES ON ALL YOU NEED TO KNOW</h1><button class="btn-1">View Courses</button>',
+                           '<h1>COACHING YOU ON BEST AGILE PRACTICES</h1><button class="btn-1">Our Offering</button>']
+            var slideTime = 5000; // 3 seconds
+            function changePicture() {
+                document.querySelector(".sec-1").style.backgroundImage = "url(" + images[i] + ")";
+                document.querySelector(".tb-1").innerHTML = content[i]
+                if (i < images.length - 1) {
+                    i++;
+                } else {
+                    i = 0;
+                }
+                setTimeout(changePicture, slideTime);
+            }
+
+            window.onload = changePicture;
+
+            function display(num,el){
+                document.querySelector('.btn-2').style.backgroundColor = "#ff8000";
+                el.style.backgroundColor = "#627686";
+                if(prev != null){
+                    document.getElementsByClassName('mid-1-2-1')[prev].style.display = 'none';
+                    document.getElementsByClassName('btn-2')[prev].style.backgroundColor = '#ff8000';
+                }
+                document.getElementsByClassName('mid-1-2-1')[num-1].style.display = 'flex';
+                prev = num-1;
+            }
+
+            $(document).ready(function(){
+                document.getElementsByClassName('mid-1-2-1')[prev].style.display = 'flex';
+                document.getElementsByClassName('btn-2')[prev].style.backgroundColor = '#627686';
+                var user = localStorage.getItem("user");
+                if(user != ""){
+                    document.querySelector("#auth-a").innerText = user;
+                    document.querySelector("#auth-a").removeAttribute("href");
+                    document.querySelector("#auth").classList.add("dropdown");
+                }
+                // Activate the Carousel, but pause it from the start
+                $("#myCarousel").carousel("pause");
+                        
+                // Go to the second item
+                $("#myBtn").click(function(){
+                    $("#myCarousel").carousel("prev");
+                });
+
+                // Go to the third item
+                $("#myBtn2").click(function(){
+                    $("#myCarousel").carousel("next");
+                });
+                    
+                // Enable Carousel Indicators
+                $(".item1").click(function(){
+                    $("#myCarousel").carousel(0);
+                });
+                $(".item2").click(function(){
+                    $("#myCarousel").carousel(1);
+                });
+                $(".item3").click(function(){
+                    $("#myCarousel").carousel(2);
+                });
+                    
+                // Enable Carousel Controls
+                $(".carousel-control-prev").click(function(){
+                    $("#myCarousel").carousel("prev");
+                });
+                $(".carousel-control-next").click(function(){
+                    $("#myCarousel").carousel("next");
+                });
+
+                const buttonPageMap = {
+                    'Collabrate': 'contactus.html',
+                    'Schedule Assessment': 'assessment.html',
+                    'View Courses': 'training.html',
+                    'Our Offering': 'coaching.html'
+                };
+
+                // Add click event listeners to all .btn-1 buttons
+                document.addEventListener('click', function(event) {
+                    const btn = event.target.closest('.btn-1');
+                    
+                    if (btn) {
+                        const buttonText = btn.textContent.trim();
+                        const page = buttonPageMap[buttonText];
+                        
+                        if (page) {
+                            window.location.href = page;
+                        } else {
+                            console.warn('No page mapped for button:', buttonText);
+                        }
+                    }
+                });
+            });
+            
+            function logout(){
+                localStorage.setItem("user","");
+                document.querySelector("#auth-a").innerText = "Login";
+                document.querySelector("#auth-a").setAttribute("href", "./signin.html");
+                document.querySelector("#auth").classList.remove("dropdown");
+            }
+        </script>
+        <div class="sec-1">
+            <div id="tb-2">
+                <div><a href="firstpage.html"><img src="./Images/log1.png"></a></div>
+                <div class="tb-2-1"><a href="./assessment.html">Assessment</a></div>
+                <div class="tb-2-1"><a href="./training.html">Training</a></div>
+                <div class="tb-2-1"><a href="./coaching.html">Coaching</a></div>
+                <div class="tb-2-1"><a href="./upcomingcourses.html">Events</a></div>
+                <div class="tb-2-1" id="auth">
+                    <a class="dropbtn" id="auth-a" href="./signin.html">Login</a>
+                    <div class="dropdown-content">
+                        <a href="javascript:;" onclick="logout()">Logout</a>
+                        <a href="javascript:;window.location.href='regcourses.html'">Courses</a>
+                      </div>
+                </div>
+            </div>
+            <div class="sec-2">
+                <div class="tb-1">
+                </div>
+            </div>
+        </div>
+        <div class="foo">
+            <div class="footer-1">
+                <div><h1>Our Services</h1></div>
+                <div class="fot-main">
+                    <div class="bot">
+                        <div class="bot-1">
+                            <img src="./Images/os-1.png">
+                            <h3>Training</h3>
+                        </div>
+                        <div class="bot-2">
+                            <p>Apex coursework will fully equip you for Agile certification. Having worked side-by
+                                side with the three elite certification agencies, we know just what you will need to gain
+                                endorsement by the three largest endorsement organizations SAFe, Scrum.org, and Scrum Alliance.</p>
+                        </div>
+                    </div>
+                    <div class="bot">
+                        <div class="bot-1">
+                            <img src="./Images/os-2.png">
+                            <h3>Assessment</h3>
+                        </div>
+                        <div class="bot-2">
+                            <p>Apex agile professionals can conduct an Agile Maturity Assessment for your business. We will carefully
+                                review your company organization and measure how the software development practices you
+                                stick to the 12 Agile Principles of the Agile Principles.</p>
+                        </div>
+                    </div>
+                    <div class="bot">
+                        <div class="bot-1">
+                            <img src="./Images/os-3.png">
+                            <h3>Coaching</h3>
+                        </div>
+                        <div class="bot-2">
+                            <p>Working one on one with your own technology leaders, 
+                                Apex professionals introduce our decades of Agile experience,  with just the right touch of sensitivity 
+                                and appropriateness to your business needs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-2">
+                <h1>Our Partner</h1>
+                <div class="fot-main">
+                    <div class="bot-3">
+                        <img src="./Images/p1.png">
+                    </div>
+                    <div class="bot-3">
+                        <img src="./Images/p2.png">
+                    </div>
+                    <div class="bot-3">
+                        <img src="./Images/p3.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mid-1" id="mid-1">
+            <div class="mid-1-1">
+                <img src="./Images/sec2-1.png">
+            </div>
+            <div class="mid-1-2">
+                <div class="mid-1-2-1">
+                    <h2 class="clr-1">Who we are?</h2>
+                    <div>
+                        <h5 class="clr-2">We are a team of 3 to 4 people who help you learn, talk about, and use Agile in your work.</h5>
+                    </div>
+                </div>
+                <div class="mid-1-2-1">
+                    <h2 class="clr-1">What we do?</h1>
+                    <div>
+                        <h5 class="clr-2">We train people how to do Agile Software Development the right way so they can build high quality, complete products.</h5>
+                    </div>
+                </div>
+                <div class="mid-1-2-1">
+                    <h2 class="clr-1">Lets drive your project to Success.</h2>
+                    <div>
+                        <h6 class="clr-1">Mailing Address</h6>
+                        <h6 class="clr-2">123, Country, City</h6>
+                        <h6 class="clr-1">Email Address</h6>
+                        <h6 class="clr-2">abc@mail.com</h6>
+                        <h6 class="clr-1">Phone number</h6>
+                        <h6 class="clr-2">+1(123) 456-7890</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="mid-1-3">
+                <button class="btn-2" onclick="display(1,this)">Who we are?</button>
+                <button class="btn-2" onclick="display(2,this)">What we do?</button>
+                <button class="btn-2" onclick="display(3,this)">Contact Us</button>
+            </div>
+            <div class="mid-1-4">
+                <a href="./aboutus.html" class="clr-1">About Us</a>
+            </div>
+        </div>
+        <div class="bottom">
+            <h1>Get Inspired</h1>
+            <div id="myCarousel-cont"> 
+                <!-- The carousel -->
+                <div id="myCarousel" class="carousel slide mt-4" data-interval="500">
+                
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li class="item1 active"></li>
+                  <li class="item2"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="bot-main">
+                            <div class="bot">
+                                <div class="bot-1">
+                                    <img src="./Images/ppl-1.png">
+                                    <h5>Roshni</h5>
+                                </div>
+                                <div class="bot-2">
+                                    <p>I would like to thank Incrementor and the training was very insightful.</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="bot-1">
+                                    <img src="./Images/ppl-2.png">
+                                    <h5>Rajkumar</h5>
+                                </div>
+                                <div class="bot-2">
+                                    <p>Concepts of Agile and Scrum explained very well and helped to understand how to Apply Professional Scrum</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="bot-1">
+                                    <img src="./Images/ppl-3.png">
+                                    <h5>Ganesh</h5>
+                                </div>
+                                <div class="bot-2">
+                                    <p> Extremely practical training that enables immediate applicability. Very entertaining, interesting and motivating to participate.</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="bot-1">
+                                    <img src="./Images/ppl-1.png">
+                                    <h5>Rakesh</h5>
+                                </div>
+                                <div class="bot-2">
+                                    <p>I really enjoyed the two-day Scrum workshop. The combination of theory and practical sessions worked really well.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bot-main">
+                            <div class="bot">
+                                <div class="bot-1">
+                                    <img src="./Images/ppl-1.png">
+                                    <h5>Bunny</h5>
+                                </div>
+                                <div class="bot-2">
+                                    <p>Great format. Engaging, knowledgable trainers who were able to react and respond.</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="bot-1">
+                                    <img src="./Images/ppl-2.png">
+                                    <h5>Relton</h5>
+                                </div>
+                                <div class="bot-2">
+                                    <p>Both the trainers were amazing, really good and engaging workshop which helped me understand scrum, enjoyed the session.</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="bot-1">
+                                    <img src="./Images/ppl-3.png">
+                                    <h5>Chinmaya</h5>
+                                </div>
+                                <div class="bot-2">
+                                    <p>I am thankful to the instructor. Especially to understand the logic behind the Scrum framework in a nutshell; that was amazing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#myCarousel">
+                    <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel">
+                    <span class="carousel-control-next-icon"></span>
+                    </a>
+              </div>
+              </div>
+              
+        </div>
+        <div class="connect">
+            <div class="stay-conn">
+                <div id="flx-1">
+                    <img src="./Images/s2.png">
+                    <h2>Stay connected with Us</h2>
+                </div>
+                <h3>Receive information on upcoming Workshops and Insigns</h3>
+                <div id="flx-2">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <button class="btn-4" id="newsletter">SignUp</button>
+            </div>
+            <div class="links">
+                <div id="agile-logo">
+                    <img src="./Images/agile-logo.png">
+                </div>
+                <div class="rel-links">
+                    <a href="./aboutus.html"><h3>About Us</h3></a>
+                    <a href="./contactus.html"><h3>Contact Us</h3></a>
+                    <a href="./trainer.html"><h3>Become a Trainer</h3></a>
+                    <a><h3>Terms & Conditions</h3></a>
+                </div>
+                <div class="follow-link">
+                    <h3>Follow Us</h3>
+                    <div id="s-link">
+                        <a><img src="./Images/fb.png"></a>
+                        <a><img src="./Images/lkdin.png"></a>
+                        <a><img src="./Images/twtr.png"></a>
+                        <a><img src="./Images/ytube.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

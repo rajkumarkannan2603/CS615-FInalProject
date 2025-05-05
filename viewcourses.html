@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Courses</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        body {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            display: flex;
+            flex-direction: column;
+        }  
+        h1{
+            margin-top: 1%;
+        }
+        .sec-1{
+            background-image: url('./Images/image-008c.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 40vh;
+            font-family: sans-serif;
+        }
+        #tb-2{
+            display:flex;
+            justify-content: space-around;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tb-2-1:hover{
+            opacity: 60%;
+        }
+        #tb-2 a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            padding-bottom: 5px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f9f9f8;
+            line-height: 40px;
+        }
+        #auth a{
+            border-bottom:none;
+        }
+        .sec-2{
+            width: 50%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            justify-content: flex-end;
+        }
+        .tb-1{
+            width: 50%;
+            text-align: center;
+        }
+        .tb-1 h1{
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .btn-1{
+            width: 200px;
+            height:50px;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 20px;
+            color: #ff8000;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .btn-1:hover{
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            color: white;
+            opacity: 80%;
+        }
+        .connect{
+            width: 100%;
+            height: 15%;
+            background-color: #627686;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;       
+        }
+        #flx-1{
+            display: flex;
+            justify-content: center;
+        }
+        #flx-1 img{
+            height: 70%;
+            padding-top: 2%;
+        }
+        #flx-1 h2{
+            padding-top: 3%;
+        }
+        .connect h2{
+            margin: 0;
+        }
+        #flx-2{
+            display: flex;
+            justify-content: space-evenly;
+            width: 70%;
+            padding-top: 1%;
+            padding-bottom: 2%;
+        }
+        #flx-2 input{
+            width:25%;
+            height:40px;
+            border:2px solid #ff8000;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        ::placeholder{
+            color: #ff8000;
+            padding-left: 2%;
+        }
+        .btn-4{
+            width: 150px;
+            height:50px;
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            border-radius: 10px;
+            color: #627686;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            color: white;
+        }
+        .btn-4:hover{
+            opacity: 80%;
+            cursor: pointer;
+        }
+        .stay-conn{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .links{
+            align-self: flex-start;
+            display: flex;
+            width: 100%;
+            height: 40%;
+            justify-content: space-between;
+        }
+        #s-link a:hover,.rel-links a:hover{
+            opacity: 60%;
+            cursor: pointer;
+        }
+        .rel-links h3{
+            margin: 5px;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+        }
+        .rel-links a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .foo,.mid-1,.bottom,.connect,.footer-2{
+            border-top: 2px solid white;
+        }
+        #agile-logo,.follow-link,.rel-links{
+            align-self: flex-end;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #ff8000;
+            padding: 8px 14px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: transparent;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #ff8000;
+        }
+        .carousel-item .bot-2{
+            width: 70%;
+        }
+        .mid{
+            margin-top: 3%;
+            margin-bottom: 2%;
+        }
+        #details li{
+            list-style: none;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:#ff8000;
+        }
+        #details h3{
+            color: #627686;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        #instructor{
+            margin-top: 5%;
+        }
+        .mid{
+            margin: 2%;
+        }
+        .mid-1{
+            margin-bottom: 2%;
+        }
+        .mid-2{
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+        }
+        .mid-2 div{
+            margin-top: 1%;
+        }
+        .mid-2 h5, .mid-3 b{
+            color: #ff8000;
+        }
+        .mid-3{
+            border: 2px solid #ff8000;
+            margin:2%;
+        }
+        .mid-3 div{
+            margin-top: 5%;
+        }
+        .bot{
+            display: flex;
+        }
+        .bot-1 img{
+            width: 100px;
+            height: 100px;
+        }
+        .bot-2{
+            text-align: justify;
+        }
+    </style>
+    </head>
+    <body>
+        <script>
+            const coursedate = new Map([
+                ['Leading Safe','April 2 - April 4,2025'],
+                ["Safe for teams", 'April 3 - April 5,2025'],
+                ["CAL1",'April 7 - April 9,2025'],
+                ["Lean Portfolio Management",'April 11 - April 14,2025'],
+                ["PSM",'April 2 - April 4,2025'],
+                ['PSPO','April 15 - April 17,2025'],
+                ['PSD','April 18 - April 20,2025'],
+                ['CSM','April 21 - April 22,2025'],
+                ['CSPO','April 23 - April 24,2025'],
+                ['CSD','April 18 - April 23,2025'],
+                ['PMP','April 20 - April 24,2025'],
+                ['PMI-ACP','April 14 - April 16,2025'],
+                ['VALUE-STREAM WORKSHOP','April 14 - April 16,2025'],
+                ['SAFE PORTFOLIO MANAGEMENT','April 11 - April 13,2025'],
+                ['PROGRAM INCREMENT WORKSHOP','April 14 - April 16,2025'],
+                ['TEAM BUILDING','April 24,2025'],
+                ['PRODUCT MANAGEMENT WORKSHOP','April 28 - April 30,2025'],
+                ['CUSTOMIZED SCRUM/KANBAN WORKSHOP','April 14,2025']
+            ]);
+            const about = new Map([
+                ['Leading Safe','A foundational course for the Certified SAFe® Program Consultant certificate.'],
+                ["Safe for teams", 'A foundational course for the Certified SAFe® Agilist certificate'],
+                ["CAL1",'Professional CAL1 training prepares you for Scrum team Levels 1-3 certification.'],
+                ["Lean Portfolio Management",'Lean Portfolio Management training prepares you for Product owner Levels 1-3 certification.'],
+                ["PSM",'Professional Scrum Master training prepares you for Scrum Master Levels 1-3 certification.'],
+                ['PSPO','A course to prepare for Professional Scrum Product Owner Certification'],
+                ['PSD','Preparation for Scrum.org’s certification as a Professional Scrum Developer'],
+                ['CSM','A Certified ScrumMaster® is able to assist a scrum team to perform at their optimum level, as well as buffering the team from distractions. The certification process teaches the Scrum framework and enables CSMs to expand their career opportunities using Agile practices.'],
+                ['CSPO','About This Course: An advanced course for experienced product owners to prepare for the Scrum Product Owner certificate'],
+                ['CSD','A foundational course for developers to prepare for the Scrum Developer scrumalliance.org certificate'],
+                ['PMP','A foundational course for the Project Manager Professional certificate'],
+                ['PMI-ACP','A foundational course for the PMI-ACP certificate'],
+                ['VALUE-STREAM WORKSHOP','A foundational workshop to introduce the concept of Value Streams.'],
+                ['SAFE PORTFOLIO MANAGEMENT','A foundational Lean-Agile and Portfolio operations course for SAFe portfolio managers.'],
+                ['PROGRAM INCREMENT WORKSHOP','Program Increment Workshop (customized offering)'],
+                ['TEAM BUILDING','A workshop designed to help teams connect and increase their effectiveness'],
+                ['PRODUCT MANAGEMENT WORKSHOP','A workshop for experience product managers interested in working in an Agile environment'],
+                ['CUSTOMIZED SCRUM/KANBAN WORKSHOP','A workshop designed to help teams be equipped to use Scrum and Kanban principles in their working environments.']
+            ]);
+            const learning = new Map([
+                ['Leading Safe','During this course, you will learn about the Scrum Master role within an enterprise operating in the SAFe environment. This course will delve into the specifics of what a Scrum Master role looks like at an enterprise level, not just in the context of a Scrum team. You will step away from this course enabled to plan and implement the Program Increment (PI), which is essential to align every level of an organization operating in a SAFe environment. Because this course is focused on how a Scrum Master fits into an organization at an enterprise level, you will learn how to apply Scrum in every part of your organization, as well as how to use iterative planning in your organization. In addition to learning about the role of Scrum Master at an enterprise level, you will also discover how acting as a coach and using servant leadership methods will enable you to create successful Agile teams. Trainers will also demonstrate how the formation of these Agile teams can help your organization reach goals and thrive as they seek to met business goals. When you complete this course and gain the Certified SAFe® Scrum Master certificate, this certification will demonstrate to companies that you are equipped and ready to lead Agile teams in a SAFe environment, and that your servant leadership and coaching skills will bring tremendous growth and value to their organizations.'],
+                ["Safe for teams", 'The goal of this two-day course is to equip you with the knowledge that is needed in order to be at the forefront of a Lean-Agile enterprise. Leading a Lean-Agile enterprise is a demanding task, and this course will provide you with a deep understanding of the Scaled Agile Framework® (SAFe®), so that you can take that framework and apply it to an enterprise. During the course, attendees will learn about how to become masters of business agility so that they can use that expertise to rise to the top in the market. Discussions will be centered around how to develop agility within teams and in the technical space, and how to use that agility to reorient how value flows in the organization. Additional discussions and sessions will provide attendees with training on how to embrace a mindset centered around the customer, as well as how to implement design thinking, as they deliver products within an agile methodology. Attendees will also be instructed on how to orchestrate and use PI Planning events, as well as how to manage and direct different Agile Release Trains (ARTs) that run concurrently. Finally, attendees will learn how to execute a Lean Portfolio Management function within their enterprises'],
+                ["CAL1",'Apex’s Professional Scrum Master training is your pathway to Scrum Certification! Apex’s Professional Scrum Master training courses prepare you for Scrum.org’s Professional Scrum Master levels 1, 2, and 3 examinations. You will learn from the best: our training is given by industry experts who have decades of experience applying Agile Scrum at leading companies like IBM, edX, PricewaterhouseCoopers, and Boston Consulting Group. In addition, Apex’s founder, Funda Durupinar Babur, is currently on the faculty at Umass Boston.'],
+                ["Lean Portfolio Management",'A Certified SAFe Lean Portfolio Manager certificate holder will be expected to show competency in all aspects of managing an Agile iterative software development environment. From the SAFe portfolio managers perspective, the course prepares the student to demonstrate their expertise in managing an enterprise-wide portfolio of Agile projects. Instructors draw from their own real-life industry experience to show students key SAFe techniques for establishing a portfolio vision, for performing Lean portfolio budgeting, port and for using portfolio tools like Portfolio Kanban. Students are given an opportunity to practice and apply these same skills with scenarios drawn from actual industry problems. As this is a foundational level course, participants gain an appreciation both for the power, as well as the shortcomings, of Lean portfolio management in an enterprise setting'],
+                ["PSM",'Apex’s Professional Scrum Master training is your pathway to Scrum Certification! Apex’s Professional Scrum Master training courses prepare you for Scrum.org’s Professional Scrum Master levels 1, 2, and 3 examinations. You will learn from the best: our training is given by industry experts who have decades of experience applying Agile Scrum at leading companies like IBM, edX, PricewaterhouseCoopers, and Boston Consulting Group. In addition, Apex’s founder, Funda Durupinar Babur, is currently on the faculty at Umass Boston.'],
+                ['PSPO','Apex’s Professional Scrum Product Owner training is your pathway to Scrum Certification! Apex’s Professional Scrum Product Owner training prepares you for Scrum.org’s Professional Scrum Product Owner (PSPO) certification examination. You will learn from the best: our training is given by industry experts who have decades of experience applying Agile Scrum at leading companies like IBM, edX, PricewaterhouseCoopers, and Boston Consulting Group. In addition, Apex’s founder, Funda Durupinar Babur, is currently on the faculty at Umass Boston. This two-day course is intended for those with a background in the software industry, whether or not you have previous experience as a product owner. From the product owner’s perspective we examine the key concepts behind iterative software development in an Agile Scrum environment. Our instructors provide real examples from industry that demonstrate the product owner’s roles and responsibilities. From creating user stories to managing product backlogs, to demonstrating value and incremental and iterative delivery, the product owner’s role is clearly explained Our instructors also cover the daily responsibilities of Agile team members and their use of Scrum, Kanban, and Extreme Programming'],
+                ['PSD','Apex’s Professional Scrum Master training is your pathway to Scrum Certification! Apex’s Professional Scrum Developer training courses prepare you for Scrum.org’s Professional Scrum Developer examinations. You will learn from the best: our training is given by industry experts who have decades of experience applying Agile Scrum at leading companies like IBM, edX, PricewaterhouseCoopers, and Boston Consulting Group. In addition, Apex’s founder, Funda Durupinar Babur, is currently on the faculty at Umass Boston.'],
+                ['CSM','After successfully completing the course, participants will have an understanding of team roles, events and artifacts. They will be eligible to take CSM test, and upon passing the test, will be asked to accept the CSM License Agreement and complete their Scrum Alliance profile.'],
+                ['CSPO','A Scrum Product Owner generally comes from the business side of the organization. In the agile world, the product owner not only manages the vision and backlog, they also help focus the team on providing the outcomes that will delight the customers.After successfully completing the course, product owners will have experience as the conduit between the business and the rest of the scrum team. They’ll learn the skill set that will help them direct the backlog and impart their vision to the team. They will be asked to accept the CSPO License Agreement and complete their Scrum Alliance profile.'],
+                ['CSD','Designed for developers, this course will hone your agile skills. Through both formal training and an assessment of your technical skills, you’ll obtain a working knowledge of Scrum and Agile principles. In addition, you’ll learn the engineering skills used by Agile developers. The course instructs developers in the tools and techniques for delivering code in an iterative process, key to Agile software development Upon completing this course, you will have mastered the skill set required to engage in an Agile development environment. You’ll become proficient with the tools and techniques used to contribute to an agile team. Certification as a Certified Scrum Developer demonstrates your commitment to the Agile principles'],
+                ['PMP','In this exciting course, you will explore the many aspects and parts that impact the successful management of projects. You will learn about project, program, and portfolio management, and the best practices that accompany each. During this course you will dive deep into the PMBOK, where you will learn about the project life cycle. In addition, you will learn about the five process groups lying within the project lifecycle: Initiating, Planning, Executing, Monitoring and Controlling, and Closing. You will then delve into the 10 Knowledge Areas that make up every project: Integration, Scope, Schedule, Cost, Quality, Resource, Communications, Risk, Procurement, and Stakeholder Management. Your trainers will help you understand the inputs, tools and techniques, and outputs within each knowledge area.At the end of the course, your trainers will provide you specific instructions and tips on what to do before taking the PMP exam that will guarantee you pass on the first attempt'],
+                ['PMI-ACP','In this two day course, you will learn about the best practices and principles of Agile. The Agile way of working is taking multiple industries by storm, and being equipped with a proper understanding of the various Agile methodologies is key to being successful in the current market. This course will provide you an in-depth look at some of the most popular Agile methodologies, like Scrum, Kanban, extreme programming (XP), test-driven development (TDD) and Lean. Throughout the two days of this training course, you will delve deep into these methodologies, and learn the ins and outs of each. You will be prepared to take the PMI-ACP certification test and gain the PMI-ACP certification, which will demonstrate to your colleagues, bosses, and stakeholders involved in your projects that you have a strong understanding of agile. Possessing the PMI-ACP certification will show that you are able to implement agile principles into the workplace in order to bring your organization and team to market success. While anyone can apply for this course or certification, it is geared towards those professionals who have experience working in an agile environment, or those whose team, organization, or enterprise is looking to adopt agile practices. If this describes you, sign up for our course today and prepare yourself to take and pass the PMI-ACP certificate. '],
+                ['VALUE-STREAM WORKSHOP','Value Streams are all about implementing practices and optimizing an organization so that it can provide a continuous flow of value to its customers. We find that today’s businesses are too often focused on delivering products and specific product features without taking into consideration their ultimate value to the customer. Value streams start with and focus specifically on business value provided to the customer.<br><br>Understanding value streams becomes increasingly important as the complexity of your organization grows. Drawing upon parallels from the Scaled Agile Framework (SAFe), many of the techniques that help with coordination and interconnection between Agile processes will also be shown effective at coordinating and delivering value at scale.<br><br>In this workshop you will partner and collaborate with other students representing a broad swath of your corporate know-how. Under the expert guidance of experienced facilitators, you will have the opportunity to immerse yourself in several actual business challenges and then learn how value stream coordination can help you manage the many competing requirements that may interfere with delivering value. You will have the opportunity to experience, practice, and apply new ways of thinking about delivering customer value. In demonstrations of complex organizations, you will see how these practices scale to meet your challenges'],
+                ['SAFE PORTFOLIO MANAGEMENT','The SAFe® Portfolio Management corporate training fits hand in glove with Apex’s SAFe Lean Portfolio Manager certificate training. Similar to the certificate training, the course prepares the student to demonstrate their expertise in managing an enterprise-wide portfolio of Agile projects. Instructors draw from their own real-life industry experience to show students key SAFe techniques for establishing a portfolio vision, for performing Lean portfolio budgeting, port and for using portfolio tools like Portfolio Kanban. Students are given an opportunity to practice and apply these same skills with scenarios drawn from actual industry problems. Whereas the certificate training is a foundational level course, the corporate training is far more detailed and specifically targeted for the user’s business challenges.<br><br>In this workshop you will partner and collaborate with other students representing a broad swath of your corporate know-how. Under the expert guidance of experienced facilitators, you will have the opportunity to immerse yourself in several actual business challenges and then learn how SAFE portfolio management techniques can help you manage the many competing requirements that may interfere with delivering value. Alongside a deep dive into the complexities of your organization, you will have the opportunity to see and experience how organizations like yours apply SAFe practices to meet their business challenges.'],
+                ['PROGRAM INCREMENT WORKSHOP','In an Agile development environment, a program increment (PI) is a timebox during which the Agile Release Train incrementally delivers value through deploying new systems and software. It is the summation of a set of sprints, and usually lasts 8-12 weeks. The PI is the final artifact of the scrum framework, and represents a usable solution<br><br>This workshop guides participants through the process of defining the program increment, guiding its development cycle, and realizing its functionality through deployment. Practicing Scrum without a program increment is merely wasted effort and a lost opportunity. This customized workshop shows your team how to successfully define and deliver the PI.<br><br>Everyone in the Agile team will benefit from this workshop. You’ll learn how to set realistic goals for the program increment, how to ensure sprints will deliver the PI, and how to utilize program increments to continuously improve the outcomes of your agile development process.'],
+                ['TEAM BUILDING','Are your teams suffering from lack of cohesion and connectedness? Are you and they feeling disconnected and frustrated because they just can’t seem to work well together? If these questions describe your teams, then this team building workshop is the perfect fit for you.<br><br>Our professional team building trainers have years of experience helping teams connect and form bonds, which enable them to be happier, more effective, and increase their performance. During this one day workshop, your team will participate in multiple team-building activities, from games to interactive discussions with one another, all of which will help them discover how to better connect and work with one another<br><br>Our trainers design these activities based on your team’s individual needs, so you can rest assured that this workshop will be tailor made for your team. Through these activities and reflective discussions, every member of your team will learn how to appreciate the unique contributions brought to the table by each member, and how they can all work together to maximize their effectiveness by recognizing their individual strengths and contributions. By the end of this workshop, we guarantee that your team members will have formed bonds, identified how to continue and strengthen their ties to each other, and be ready and excited to work together.'],
+                ['PRODUCT MANAGEMENT WORKSHOP','Product Management has been around as long as there have been products, but it has been redefined in the Agile world. In an Agile framework, product management is redefined to allow for building and deploying products in a new way. The ability to work with an iterative development cycle and a fast-moving and self-organized team requires a different approach.<br><br>This workshop highlights the ways that product management in an Agile environment can maintain high standards while taking advantage of the flexibility and quick delivery of value to customers. Product managers learn how to set a clear vision for the team, guide the backlog, and maintain alignment with the business goals. Using skills from this workshop, project managers and other stakeholders will get first-hand experience in how to identify and prioritize features, manage the backlog, and see that the goals of each program increment are realized.'],
+                ['CUSTOMIZED SCRUM/KANBAN WORKSHOP','Is your team wanting to learn more about Scrum and Kanban principles in order to enhance your team and working environment? If so, these two workshops have been designed with you in mind. Choose one or both, depending on your team’s needs.<br><br>In our Kanban team workshops, your team will learn about what Kanban actually is and the best practices associated with using it. You will learn about how and when to use it in your team environment, and how you can best incorporate it in your team with other Agile practices you are currently using, or hope to use in future. Our trainers will also demonstrate how to create a Kanban board, and will show you many examples of how different teams use Kanban boards. By the end of this workshop, your team will be ready, able, and empowered to incorporate and use Kanban in your organization to maximize their success and delivery of products.<br><br>If Scrum training is what your team needs, then look no further. Our Scrum workshops are designed to equip your team with a deep understanding of the Scrum framework and be able to then apply Scrum principles in a working environment. During this one day course, your team will learn about Agile principles and the foundational values and roles that form the basis of Scrum. Trainers will provide instruction on Scrum theory, the Scrum framework, and the role of the Scrum Master within the Scrum environment. Your team will participate in workshops during the course, where they will practice applying the knowledge about Scrum into real world situations and work environments. At the end of the course, your team will understand the Scrum framework, be able to apply this knowledge through application, Scrum events, and Scrum roles.']
+            ]);
+
+            const overview = new Map([
+                ['Leading Safe','<li>The highest passing rates: The Certified SAFe® Scrum Master certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ["Safe for teams", '<li>The highest passing rates: The Certified SAFe® Agilist certification exam is rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your courses are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ["CAL1",'<li>The highest passing rates: The Certified SAFe® Agilist certification exam is rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your courses are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ["Lean Portfolio Management",'<li>The highest passing rates: The Lean Portfolio Management certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ["PSM",'<li>The highest passing rates: The PSM certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your courses are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['PSPO','<li>The highest passing rates: The PSPO certification exam is rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your courses are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['PSD','<li>The highest passing rates: The PSD certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['CSM','<li>The highest passing rates: The CSM certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['CSPO','<li>The highest passing rates: The CSPO certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['CSD','<li>The highest passing rates: The CSD certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['PMP','<li>The highest passing rates: The PMP certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['PMI-ACP','<li>The highest passing rates: The PMI-ACP certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['VALUE-STREAM WORKSHOP','<li>The highest passing rates: The PSM certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['SAFE PORTFOLIO MANAGEMENT','<li>The highest passing rates: The PSM certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted.</li><li>Free follow-up access to your course materials for one year</li><li> 25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['PROGRAM INCREMENT WORKSHOP','<li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['TEAM BUILDING','<li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['PRODUCT MANAGEMENT WORKSHOP','<li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>'],
+                ['CUSTOMIZED SCRUM/KANBAN WORKSHOP','<li>Free follow-up access to your course materials for one year.</li><li>25% discount on future course fees. Save on courses as you sail through the certification process.</li><li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li>']
+            ]);
+            const Prereq = new Map([
+                ['Leading Safe','Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ["Safe for teams", 'Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ["CAL1",'Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ["Lean Portfolio Management",'Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ["PSM",'Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ['PSPO','Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ['PSD','Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ['CSM','Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ['CSPO','Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ['CSD','Highly recommended that participants have 5+ years of experience working in software development, business analysis, testing, project management, or product management fields. Experience working in a Scrum environment is also highly desirable.'],
+                ['PMP','<ul><li>A four-year degree</li><li>Three years of leading projects</li><li>35 hours of project management education/training, or a CAPM® certification</li></ul>OR<ul><li>A high school diploma, an associate’s degree, or global equivalent</li><li>Five years of leading projects</li><li>35 hours of project management education/training, or a CAPM® certification</li></ul>'],
+                ['PMI-ACP','In order to qualify for the PMI-ACP exam, applicants must have the following:<br><br><ul><li>2,000 hours of experience working on teams in general projects OR a current PMP® or PgMP® certification</li><li>1,500 hours experience working on project teams in an agile environment</li><li>21 training hours in the practices of agile</li></ul>'],
+                ['VALUE-STREAM WORKSHOP','Experience in management is highly desired, whether from IT or from other departments.'],
+                ['SAFE PORTFOLIO MANAGEMENT','Experience in management is highly desired; experience in SAFe or Agile techniques will be beneficial.'],
+                ['PROGRAM INCREMENT WORKSHOP','Previous experience in an IT organization highly desired, whether from actual industry experience or theory.'],
+                ['TEAM BUILDING','None'],
+                ['PRODUCT MANAGEMENT WORKSHOP',' Previous experience as a manager in an IT organization highly desired, whether from actual industry experience or theory.'],
+                ['CUSTOMIZED SCRUM/KANBAN WORKSHOP','None, but recommended that participants have some knowledge or understanding of general Agile principles.']
+            ]);
+            const info = new Map([
+                ['Leading Safe','2 48hours/week $1000'],
+                ["Safe for teams", '2 48hours/week $1000'],
+                ["CAL1",'2 48hours/week $1000'],
+                ["Lean Portfolio Management",'3 72hours/week $1500'],
+                ["PSM",'2 48hours/week $1000'],
+                ['PSPO','2 48hours/week $1000'],
+                ['PSD','2 48hours/week $1000'],
+                ['CSM','2 48hours/week $1000'],
+                ['CSPO','2 48hours/week $1000'],
+                ['CSD','5 120hours/week $3000'],
+                ['PMP','4 96hours/week $2000'],
+                ['PMI-ACP','2 48hours/week $1000'],
+                ['VALUE-STREAM WORKSHOP','2 48hours/week $1000'],
+                ['SAFE PORTFOLIO MANAGEMENT','2 48hours/week $1000'],
+                ['PROGRAM INCREMENT WORKSHOP','3 72hours/week $1500'],
+                ['TEAM BUILDING','1 24hours/week $500'],
+                ['PRODUCT MANAGEMENT WORKSHOP','1 24hours/week $500'],
+                ['CUSTOMIZED SCRUM/KANBAN WORKSHOP','1 24hours/week $500']
+            ]);
+
+            $(document).ready(function(){
+                var user = localStorage.getItem("user");
+                if(user != ""){
+                    document.querySelector("#auth-a").innerText = user;
+                    document.querySelector("#auth-a").removeAttribute("href");
+                    document.querySelector("#auth").classList.add("dropdown");
+                }
+                const params = new Proxy(new URLSearchParams(window.location.search), {
+                    get: (searchParams, prop) => searchParams.get(prop),
+                });
+                var selected = params.selected;
+                var content = '<li><h3>'+selected+'</h3></li><li>'+coursedate.get(selected)+'</li><li>Umass Boston</li>';
+                document.getElementById('details').innerHTML=content;
+                document.getElementById('about').innerHTML+= about.get(selected);
+                document.getElementById('learning').innerHTML+= learning.get(selected);
+                document.getElementById('overview').innerHTML+='<ul>'+overview.get(selected)+'</ul>';
+                document.getElementById('prereq').innerHTML+=Prereq.get(selected);
+                var inf = info.get(selected).split(' ');
+                document.getElementById('length').innerHTML = '<h5><b>Length : </b>'+inf[0]+' Days</h5>';
+                document.getElementById('effort').innerHTML = '<h5><b>Effort : </b>'+inf[1]+'</h5>';
+                document.getElementById('price').innerHTML = '<h5><b>Price : </b>'+inf[2]+'</h5>';
+
+                let usercourses = JSON.parse(localStorage.getItem("usercourses") || "[]");
+
+                document.querySelector('#register>button').addEventListener('click',(e)=>{
+                    if(user==""){
+                        window.location.href = "signin.html";
+                    }
+                    var flag = true;
+                    for(i=0;i<usercourses.length;i++){
+                        if(usercourses[i]['name'] === user){
+                            usercourses[i]['courses'].push(selected);
+                            flag=false;
+                            break;
+                        }
+                    }
+                    if(flag){
+                        var obj = {
+                            "name":user,
+                            "courses":[selected]
+                        }
+                        usercourses.push(obj);
+                    }
+                    console.log(usercourses)
+                    localStorage.setItem("usercourses",JSON.stringify(usercourses));
+                    updateregistered();
+                });
+                function updateregistered(){
+                    var ele = document.querySelector('#register>button');
+                    ele.setAttribute('disabled', 'disabled');
+                    ele.style.backgroundColor = "white";
+                    ele.style.color = '#ff8000';
+                    ele.innerText="Registered"
+                }
+
+                for(i=0;i<usercourses.length;i++){
+                    if(usercourses[i]['name'] === user && usercourses[i]['courses'].includes(selected)){
+                        updateregistered();
+                        break;
+                    }
+                }
+            });
+            function logout(){
+                localStorage.setItem("user","");
+                document.querySelector("#auth-a").innerText = "Login";
+                document.querySelector("#auth-a").setAttribute("href", "./signin.html");
+                document.querySelector("#auth").classList.remove("dropdown");
+            }
+        </script>
+        <div class="sec-1">
+            <div id="tb-2">
+                <div><a href="firstpage.html"><img src="./Images/log1.png"></a></div>
+                <div class="tb-2-1"><a href="./assessment.html">Assessment</a></div>
+                <div class="tb-2-1"><a href="./training.html">Training</a></div>
+                <div class="tb-2-1"><a href="./coaching.html">Coaching</a></div>
+                <div class="tb-2-1"><a href="./upcomingcourses.html">Events</a></div>
+                <div class="tb-2-1" id="auth">
+                    <a class="dropbtn" id="auth-a" href="./signin.html">Login</a>
+                    <div class="dropdown-content">
+                        <a href="javascript:;" onclick="logout()">Logout</a>
+                        <a href="javascript:;window.location.href='regcourses.html'">Courses</a>
+                      </div>
+                </div>
+            </div>
+            <div class="sec-2">
+                <div class="tb-1">
+                    <h1>View Courses</h1>
+                </div>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="row mid-1">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-2" id="logo"><img src="./Images/logo2c.png"></div>
+                        <div class="col-lg-8" id="details"></div>
+                        <div class="col-lg-2" id="register"><button class="btn-4">Register</button></div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-7">
+                    <div class="row mid-2">
+                        <div id="about">
+                            <h5>About this course</h5>
+                        </div>
+                        <div id="learning">
+                            <h5>What you'll learn</h5>
+                        </div>
+                        <div id="overview">
+                            <h5>Training overview</h5>
+                        </div>
+                        <div id="prereq">
+                            <h5>Prerequisites</h5>
+                        </div>
+                        <div id="instructor">
+                            <h5>Meet our instructors</h5>
+                            <div class="bot">
+                                <div class="bot-1 col-lg-2">
+                                    <img src="./Images/image-013.png">
+                                </div>
+                                <div class="bot-2 col-lg-10">
+                                    <p>Funda Durupinar Babur has been teaching software development and Agile courses for
+                                        over 10 years. He has extensive experience leading teams in Agile transformation, with
+                                        successful results. Funda currently teaches in the Boston area at Umass Boston.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mid-3">
+                    <div id="length"></div>
+                    <div id="effort"></div>
+                    <div id="price"></div>
+                    <div id="review">
+                        <h5><b>Reviews : </b></h5>
+                        <div class="bot-main">
+                            <div class="bot">
+                                <div class="bot-1 col-lg-4">
+                                    <img src="./Images/image-013.png">
+                                    <h6>Roshini</h6>
+                                </div>
+                                <div class="bot-2 col-lg-8">
+                                    <p>I would like to thank Incrementor and the training was very insightful. Kudos for Nils as a trainer, great job!</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="bot-1 col-lg-4">
+                                    <img src="./Images/image-012.png">
+                                    <h6>Rajkumar</h6>
+                                </div>
+                                <div class="bot-2 col-lg-8">
+                                    <p>Concepts of Agile and Scrum explained very well and helped to understand how to Apply Professional Scrum</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="bot-1 col-lg-4">
+                                    <img src="./Images/image-011.png">
+                                    <h6>Ganesh</h6>
+                                </div>
+                                <div class="bot-2 col-lg-8">
+                                    <p>I really enjoyed the two-day Scrum workshop. The combination of theory and practical sessions worked really well.</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="bot-1 col-lg-4">
+                                    <img src="./Images/image-012.png">
+                                    <h6>Rakesh</h6>
+                                </div>
+                                <div class="bot-2 col-lg-8">
+                                    <p>This course equipped me with the skills I needed to grow and advance in my 
+                                        career. Many thanks!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        <div class="connect">
+            <div class="stay-conn">
+                <div id="flx-1">
+                    <img src="./Images/s2.png">
+                    <h2>Stay connected with Us</h2>
+                </div>
+                <h3>Receive information on upcoming Workshops and Insigns</h3>
+                <div id="flx-2">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <button class="btn-4">SignUp</button>
+            </div>
+            <div class="links">
+                <div id="agile-logo">
+                    <img src="./Images/agile-logo.png">
+                </div>
+                <div class="rel-links">
+                    <a href="./aboutus.html"><h3>About Us</h3></a>
+                    <a href="./contactus.html"><h3>Contact Us</h3></a>
+                    <a href="./trainer.html"><h3>Become a Trainer</h3></a>
+                    <a><h3>Terms & Conditions</h3></a>
+                </div>
+                <div class="follow-link">
+                    <h3>Follow Us</h3>
+                    <div id="s-link">
+                        <a><img src="./Images/fb.png"></a>
+                        <a><img src="./Images/lkdin.png"></a>
+                        <a><img src="./Images/twtr.png"></a>
+                        <a><img src="./Images/ytube.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

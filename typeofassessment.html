@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assessments</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        body {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
+        }  
+        #tb-2{
+            display:flex;
+            justify-content: space-around;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tb-2-1:hover{
+            opacity: 60%;
+        }
+        #tb-2 a{
+            text-decoration: none;
+            cursor: pointer;
+            color: #ff8000;
+            padding-bottom: 5px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ff8000;
+            line-height: 40px;
+        }
+        #login a{
+            border-bottom:none;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            column-gap: 50px;
+            justify-content: center;
+        }
+        .sec-2{
+            margin-top:0.5%;
+            justify-content: center;
+            height: 85vh;
+        }
+        .poster{
+            color: black;
+        }
+        .poster img{
+            width: 100%;
+            height: 70vh;
+            padding-bottom: 10%;
+        }
+        .content{
+            color: black;
+            text-align: justify;
+            font-size: 16px;
+            height: 100%;
+            word-spacing: 0.7em;
+            line-height: 2em;   
+        }
+        .connect{
+            width: 100%;
+            height: 15%;
+            background-color: #627686;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;       
+        }
+        #flx-1{
+            display: flex;
+            justify-content: center;
+        }
+        #flx-1 img{
+            padding-top: 2%;
+        }
+        #flx-1 h2{
+            padding-top: 3%;
+        }
+        .connect h2{
+            margin: 0;
+        }
+        #flx-2{
+            display: flex;
+            justify-content: space-evenly;
+            width: 70%;
+            padding-top: 1%;
+            padding-bottom: 2%;
+        }
+        #flx-2 input{
+            width:25%;
+            height:40px;
+            border:2px solid #ff8000;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        ::placeholder{
+            color: #ff8000;
+            padding-left: 2%;
+        }
+        .btn-4{
+            width: 150px;
+            height:50px;
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            border-radius: 10px;
+            color: #627686;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            color: white;
+        }
+        .btn-4:hover{
+            opacity: 80%;
+            cursor: pointer;
+        }
+        .stay-conn{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .links{
+            align-self: flex-start;
+            display: flex;
+            width: 100%;
+            height: 40%;
+            justify-content: space-between;
+        }
+        #s-link a:hover,.rel-links a:hover{
+            opacity: 60%;
+            cursor: pointer;
+        }
+        .rel-links h3{
+            margin: 5px;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+        }
+        .rel-links a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .foo,.mid-1,.bottom,.connect,.footer-2{
+            border-top: 2px solid white;
+        }
+        #agile-logo,.follow-link,.rel-links{
+            align-self: flex-end;
+        }
+        .btn-2{
+            color:white;
+            background-color: #ff8000;
+            border: 2px solid #ff8000;
+            font-weight: bold;
+            height:50px;
+        }
+        .btn-2:hover,.btn-3:hover{
+            cursor: pointer;
+            opacity: 70%;
+        }
+        #mid-1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .clr-1{
+            color:#ff8000;
+        }
+        .clr-2{
+            color: grey;
+            text-align: justify;
+        }
+        .mid-content{
+            display: none;
+            flex-direction: column;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #ff8000;
+            padding: 8px 14px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: transparent;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: transparent;
+        }
+        #auth a{
+            border-bottom:none;
+        }
+        #mid-1-2{
+            margin-top: 2%;
+        }
+    </style>
+    </head>
+    <body>
+        <script>
+            let prev = 0;
+            $(document).ready(function(){
+                document.getElementsByClassName('mid-content')[prev].style.display = 'flex';
+                document.getElementsByClassName('btn-2')[prev].style.backgroundColor = '#627686';
+                var user = localStorage.getItem("user");
+                if(user != ""){
+                    document.querySelector("#auth-a").innerText = user;
+                    document.querySelector("#auth-a").removeAttribute("href");
+                    document.querySelector("#auth").classList.add("dropdown");
+                }
+            });
+            function display(num,el){
+                document.querySelector('.btn-2').style.backgroundColor = "#ff8000";
+                el.style.backgroundColor = "#627686";
+                if(prev != null){
+                    document.getElementsByClassName('mid-content')[prev].style.display = 'none';
+                    document.getElementsByClassName('btn-2')[prev].style.backgroundColor = '#ff8000';
+                }
+                document.getElementsByClassName('mid-content')[num-1].style.display = 'flex';
+                prev = num-1;
+            }
+            function logout(){
+                localStorage.setItem("user","");
+                document.querySelector("#auth-a").innerText = "Login";
+                document.querySelector("#auth-a").setAttribute("href", "./signin.html");
+                document.querySelector("#auth").classList.remove("dropdown");
+            }
+        </script>
+        <div id="tb-2">
+            <div><a href="firstpage.html"><img src="./Images/logo2.png"></a></div>
+            <div class="tb-2-1"><a href="./assessment.html">Assessment</a></div>
+            <div class="tb-2-1"><a href="./training.html">Training</a></div>
+            <div class="tb-2-1"><a href="./coaching.html">Coaching</a></div>
+            <div class="tb-2-1"><a href="./upcomingcourses.html">Events</a></div>
+            <div class="tb-2-1" id="auth">
+                <a class="dropbtn" id="auth-a" href="./signin.html">Login</a>
+                <div class="dropdown-content">
+                    <a href="javascript:;" onclick="logout()">Logout</a>
+                    <a href="javascript:;window.location.href='regcourses.html'">Courses</a>
+                  </div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="sec-2">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <h2 style="color: #ff8000;padding-top: 1%;">Type of Assessments</h2>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="poster col-lg-10">
+                        <div class="row">
+                            <div class="col-lg-3" id="mid-1">
+                                <button class="btn-2" onclick="display(1,this)">Leadership Assessment</button>
+                                <button class="btn-2" onclick="display(2,this)">Organisation Assessment</button>
+                                <button class="btn-2" onclick="display(3,this)">Portfolio Assessment</button>
+                                <button class="btn-2" onclick="display(4,this)">Program Assessment</button>
+                                <button class="btn-2" onclick="display(5,this)">Team Assessment</button>
+                                <button class="btn-2" onclick="display(6,this)">Individual Assessment</button>
+                            </div>
+                            <div class="col-lg-5" id="mid-1-2">
+                                <div class="mid-content">
+                                    <h2 class="clr-1">Leadership Assessment</h1>
+                                    <div>
+                                        <h5 class="clr-2">The success of Agile development initiatives will be either enhanced or undermined by your
+                                            organization's leaders. The Apex leadership assessment measures quantitatively the skills and
+                                            capacities of your leadership team. According to the Agile Manifesto, the following principles
+                                            are of most importance to leaders. First, creating value: does leadership know that
+                                            the value creation instead of feature creation? Second, encouraging change: does
+                                            leadership not only welcome change, and not only produce change, but indeed reward
+                                            change? And third, deliver frequently: does leadership drive the organization to processes
+                                            favorable to continued development and provision? Apex's leadership assessment
+                                            thoroughly examines leadership ability in your organization, and it generates suggestions
+                                            to place leadership on the road to agility.</h5>
+                                    </div>
+                                </div>
+                                <div class="mid-content">
+                                    <h2 class="clr-1">Organisation Assessment</h1>
+                                    <div>
+                                        <h5 class="clr-2">As useful as Agile is to your teams working on software, the same principles hold true
+                                            to your organization. The Apex Organization Assessment will measure your current skills
+                                            as an Agile company. We will identify areas in which you are going in the right direction and
+                                            those where you are practicing things that are bad. Such as a well-tested and tried family
+                                            recipe, we've extracted our experience that spans over four decades of serving the software community to make a
+                                            comprehensive assessment of software development practices. Among others, we measure
+                                            the following key skills: value: do every your product releases produce recognizable and
+                                            beneficial to the customer; willingness to change: are your organizations open and
+                                            prompts for changing requirements, both early and late in the product cycle; and frequent
+                                            deliveries via a continuous improvement and delivery pipeline.</h5>
+                                    </div>
+                                </div>
+                                <div class="mid-content">
+                                    <h2 class="clr-1">Portfolio Assessment</h1>
+                                    <div>
+                                        <h5 class="clr-2">Rarely does a company produce a single product or feature that is divorced from other
+                                            cooperating products. Under a structure of several and concurrent development efforts, a
+                                            siloed product development model is counterproductive. Do your product teams
+                                            operate independently or is there a cooperative spirit aligning your goals? Is progress gated by
+                                            milestones and measured by the amount of work completed? Most of the same techniques you
+                                            accrue to iterative software development as well as apply to portfolio management. Our portfolio
+                                            evaluation identifies where you are on an Agile continuum and more importantly, what practices
+                                            can you make that brings value, open-mindedness to change, and improved delivery to your product
+                                            portfolio.</h5>
+                                    </div>
+                                </div>
+                                <div class="mid-content">
+                                    <h2 class="clr-1">Program Assessment</h1>
+                                    <div>
+                                        <h5 class="clr-2">The Apex program evaluation measures how well your development strategy for programs matches
+                                            up with your product portfolio. In an organization with several simultaneous development streams,
+                                            cooperation and good intentions are not enough to bring about desired outcomes. Apex measures the
+                                            program stakeholders' participation and considers strategies for predictability and problem
+                                            resolution. Apex views program planning - is it in line with the rest of the programs in your
+                                            enterprise portfolio? The Apex program assessment measures the probability of your program to
+                                            exist together in sync within the portfolio and add value while being open to change.</h5>
+                                    </div>
+                                </div>
+                                <div class="mid-content">
+                                    <h2 class="clr-1">Team Assessment</h1>
+                                    <div>
+                                        <h5 class="clr-2">There are two significant points to consider. First, there is no ideal team situation. Second,
+                                            it is so much work to create an atmosphere in which teams can thrive. The Apex Team Assessment
+                                            looks at the makeup and dynamics of an individual agile team. We ascertain to what degree has
+                                            the team gelled or what are the barriers to that happening. We examine the team
+                                            dynamics: what level of trust is there between team members? Is there a team culture, and if so, is
+                                            the culture beneficial for, or damaging to, team success? Does the team have the ability to
+                                            provide excellent products? Apex's decades of experience working in Agile organizations enables us to
+                                            acknowledge and evaluate those elements of teamwork that promote the creation of value, being receptive to
+                                            evolve, and facilitate continuous improvement and delivery.</h5>
+                                    </div>
+                                </div>
+                                <div class="mid-content">
+                                    <h2 class="clr-1">Individual Assessment</h1>
+                                    <div>
+                                        <h5 class="clr-2">Apex in-house experts are not merely Agile development methodology specialists, but we possess
+                                            gained that experience over years of working in different software industries. We understand
+                                            individuals like your key contributors because we have also been key contributors. Drawing from
+                                            in-depth domain expertise, Apex can assess the competency of the key individuals in your
+                                            organization. The core Agile principles of value delivery, adaptability to change, and optimizing
+                                            delivery is representative of trans-change skills and behavior. Our tests initially measure where your
+                                            key contributors are in an Agile continuum. Additionally, the assessment provides concrete
+                                            recommendations that can assist them in excelling.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="poster col-lg-4">
+                                <br>
+                                <a href="#"><img src ="./Images/asmt-4.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="connect">
+                <div class="stay-conn">
+                    <div id="flx-1">
+                        <img src="./Images/s2.png">
+                        <h2>Stay connected with Us</h2>
+                    </div>
+                    <h3>Receive information on upcoming Workshops and Insigns</h3>
+                    <div id="flx-2">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <button class="btn-4">SignUp</button>
+                </div>
+                <div class="links">
+                    <div id="agile-logo">
+                        <img src="./Images/agile-logo.png">
+                    </div>
+                    <div class="rel-links">
+                        <a href="./aboutus.html"><h3>About Us</h3></a>
+                        <a href="./contactus.html"><h3>Contact Us</h3></a>
+                        <a href="./trainer.html"><h3>Become a Trainer</h3></a>
+                        <a><h3>Terms & Conditions</h3></a>
+                    </div>
+                    <div class="follow-link">
+                        <h3>Follow Us</h3>
+                        <div id="s-link">
+                            <a><img src="./Images/fb.png"></a>
+                            <a><img src="./Images/lkdin.png"></a>
+                            <a><img src="./Images/twtr.png"></a>
+                            <a><img src="./Images/ytube.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
