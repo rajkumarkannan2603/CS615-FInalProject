@@ -402,6 +402,11 @@
                     document.querySelector("#auth-a").removeAttribute("href");
                     document.querySelector("#auth").classList.add("dropdown");
                 }
+                else {
+                     document.querySelector("#auth-a").innerText = "Login";
+                     document.querySelector("#auth-a").setAttribute("href", "./signin.html");
+                     document.querySelector("#auth").classList.remove("dropdown");
+                }
                 // Activate the Carousel, but pause it from the start
                 $("#myCarousel").carousel("pause");
                         
