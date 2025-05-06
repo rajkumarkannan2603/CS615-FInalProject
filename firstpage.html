@@ -397,7 +397,7 @@
                 document.getElementsByClassName('mid-1-2-1')[prev].style.display = 'flex';
                 document.getElementsByClassName('btn-2')[prev].style.backgroundColor = '#627686';
                 var user = localStorage.getItem("user");
-                if(user != ""){
+                if(user != null){
                     document.querySelector("#auth-a").innerText = user;
                     document.querySelector("#auth-a").removeAttribute("href");
                     document.querySelector("#auth").classList.add("dropdown");
